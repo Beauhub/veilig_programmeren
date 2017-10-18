@@ -67,7 +67,18 @@ if (isset($_POST['submit'])) {
 /* End Code by Mark van Dooremaal */
 
 
+/*Start code by Beau van Aanholt*/
+	if(isset($_REQUEST["number"]))
+{
+    $number = filter_var($_REQUEST["number"], FILTER_SANITIZE_NUMBER_INT);
+    $number=substr($number,0,20);
+    echo "NUMBER: '".$number."'<br>";
+}else
+{
+    echo "NUMBER: '' (invalid)<br>";
+}
 
+/* End of code by Beau van Aanholt */
 
 
 
